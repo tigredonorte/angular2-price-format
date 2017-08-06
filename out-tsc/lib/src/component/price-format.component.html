@@ -1,0 +1,15 @@
+<input
+    type="tel"
+    [(ngModel)]="_price"
+    ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/"
+
+    [readonly]="readonly"
+    [disabled]="disabled"
+    [class]="options.cssclass"
+    [placeholder]="options.placeholder"
+
+    (keyup)="handleKeyboardKeyUp($event)"
+    (keydown)="handleKeyboardKeyDown($event)"
+    (focusout)="focusOutEvent()"
+    (focusin)="focusInEvent()"
+/>
