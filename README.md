@@ -17,4 +17,3 @@ https://github.com/Finance-e/angular-price-format/
 
 
 ## Run demo
-
