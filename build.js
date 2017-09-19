@@ -24,7 +24,7 @@ const es2015OutputFolder = path.join(compilationFolder, 'lib-es2015');
 
 return Promise.resolve()
   // Copy library to temporary folder and inline html/css.
-  .then(() => _relativeCopy(`**/*`, srcFolder, tempLibFolder)
+  .then(() => _relativeCopy('**/*', srcFolder, tempLibFolder)
     .then(() => inlineResources(tempLibFolder))
     .then(() => console.log('Inlining succeeded.'))
   )
@@ -68,7 +68,11 @@ return Promise.resolve()
       ],
       plugins: [
         commonjs({
-          include: ['node_modules/rxjs/**']
+          include: [
+            'node_modules/rxjs/**',
+            'node_modules/text-mask-core/dist/textMaskCore.js',
+            'node_modules/angular2-text-mask/dist/angular2TextMask.js'
+          ]
         }),
         sourcemaps(),
         nodeResolve({ jsnext: true, module: true })

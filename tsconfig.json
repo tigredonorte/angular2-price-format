@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "module": "es2015",
     "baseUrl": "./src",
+    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "rootDir": "./src",
@@ -12,6 +14,11 @@
     "skipLibCheck": true,
     "types": [
       "jasmine"
-    ]
+    ],
+    "sourceMap": true,
+    "declaration": true
+  },
+  "angularCompilerOptions": {
+    "skipTemplateCodegen": true
   }
 }
