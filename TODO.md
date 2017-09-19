@@ -3,3 +3,4 @@
 - [ ] Write e2e test
 - [ ] Write CHANGELOG.md
 - [ ] Write CONTRIBUTING.md
+- [ ] Include a .npmignore file
