@@ -1,6 +1,8 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { MdInputModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TextMaskModule } from 'angular2-text-mask';
 import { PriceFormatComponent } from './component/price-format.component';
 import { MdPriceFormatComponent } from './component/md/md-price-format.component';
@@ -26,7 +28,11 @@ export class PriceFormatModule {
 }
 
 @NgModule({
-    imports: CommonImports,
+    imports: [
+      ...CommonImports,
+      BrowserAnimationsModule,
+      MdInputModule
+    ],
     declarations: [ MdPriceFormatComponent ],
     exports: [ MdPriceFormatComponent ]
 })
