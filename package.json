@@ -109,7 +109,7 @@
   },
   "dependencies": {
     "@angular/animations": "^4.4.3",
-    "@angular/cdk": "github:angular/cdk-builds",
-    "@angular/material": "github:angular/material2-builds"
+    "@angular/cdk": "^2.0.0-beta.11",
+    "@angular/material": "^2.0.0-beta.11"
   }
 }
