@@ -8,6 +8,7 @@
 /tmp
 /src/**/*.js
 /src/**/*.js.map
+/out-tsc
 
 # dependencies
 /node_modules
