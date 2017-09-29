@@ -119,7 +119,6 @@ export class BasePriceFormatComponent implements ControlValueAccessor, OnChanges
     try {
       let code = (e.keyCode ? e.keyCode : e.which);
       let typed = String.fromCharCode(code);
-
       if (isNaN(Number(typed))) {
         if ((code >= 48 && code <= 57) || (code >= 96 && code <= 105)) {
           let temp = code - ((code >= 96) ? 96 : 48);
@@ -127,19 +126,29 @@ export class BasePriceFormatComponent implements ControlValueAccessor, OnChanges
         }
       }
 
-      const str = this._price;
+      const isBackspace = c => c === 8;
+      const isDelete = c => c === 46;
+      const str = String(this._price);
       const functional = this.isFunctional(code);
+      let newValue = '0';
       if (!functional) {
-        const newValue = this.formatter.priceFormat(str.concat(typed));
+        newValue = this.formatter.priceFormat(str.concat(typed));
         if (str !== newValue) {
           this.price = this.formatter.change(newValue);
         }
+        e.preventDefault();
+      } else if (isBackspace(code) || isDelete(code)) {
+        newValue = this.formatter.priceFormat(str.slice(0, -1));
+        if (str !== newValue) {
+          this.price = this.formatter.change(newValue);
+        }
+        e.preventDefault();
       }
     } catch (e) { console.log(e); }
   }
 
   private isFunctional(code: number) {
-    if ((code >= 48 && code <= 57) || (code >= 96 && code <= 105)) { return true; }
+    if ((code >= 48 && code <= 57) || (code >= 96 && code <= 105)) { return false; }
     if (code === 8) { return true; }
     if (code === 9) { return true; }
     if (code === 13) { return true; }

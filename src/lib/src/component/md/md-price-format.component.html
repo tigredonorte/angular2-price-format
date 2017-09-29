@@ -1,18 +1,16 @@
 <md-form-field>
-<input mdInput
+  <input mdInput
     type="tel"
-    ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/"
+    [textMask]="{mask:numberMask}"
     [formControl]="control"
     [value]="_price"
     [readonly]="readonly"
-    [disabled]="disabled"
     [ngClass]="options.cssclass"
     [placeholder]="options.placeholder"
 
     (keyup)="handleKeyboardKeyUp($event)"
     (keydown)="handleKeyboardKeyDown($event)"
     (focusout)="focusOutEvent()"
-    (focusin)="focusInEvent()"
-/>
-<md-error>{{error}}</md-error>
+    (focusin)="focusInEvent()"/>
+  <md-error>{{error}}</md-error>
 </md-form-field>

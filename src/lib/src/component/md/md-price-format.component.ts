@@ -13,6 +13,7 @@ import {
   NG_VALUE_ACCESSOR,
   NG_VALIDATORS
 } from '@angular/forms';
+import createNumberMask from 'text-mask-addons/dist/createNumberMask'
 
 /* Own modules */
 import { BasePriceFormatComponent } from '../base-price-format.component';
@@ -41,12 +42,11 @@ export class MdPriceFormatComponent extends BasePriceFormatComponent implements 
     priceFormatMaxValueError: 'Insert a price less than or equal to ${maxPrice}',
   };
   public error = '';
+  public numberMask = null;
   
   ngOnInit() {
     const self = this;
-    this.control.valueChanges.subscribe(data => {
-      self._date = data;
-    });
+    this.numberMask = createNumberMask(this.options);
     this.control.statusChanges.subscribe(status => {
       if (status === 'VALID' || !Object.keys(self.control.errors || {}).length) {
         self.error = '';
