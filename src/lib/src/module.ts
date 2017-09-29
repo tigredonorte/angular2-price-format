@@ -1,6 +1,6 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MdInputModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TextMaskModule } from 'angular2-text-mask';
@@ -30,6 +30,7 @@ export class PriceFormatModule {
 @NgModule({
     imports: [
       ...CommonImports,
+      ReactiveFormsModule,
       BrowserAnimationsModule,
       MdInputModule
     ],

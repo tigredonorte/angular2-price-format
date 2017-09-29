@@ -1,9 +1,9 @@
 <md-form-field>
 <input mdInput
     type="tel"
-    [(ngModel)]="_price"
     ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/"
-
+    [formControl]="control"
+    [value]="_price"
     [readonly]="readonly"
     [disabled]="disabled"
     [ngClass]="options.cssclass"
@@ -14,4 +14,5 @@
     (focusout)="focusOutEvent()"
     (focusin)="focusInEvent()"
 />
+<md-error>{{error}}</md-error>
 </md-form-field>
