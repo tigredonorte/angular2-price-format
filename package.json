@@ -111,7 +111,7 @@
     "@angular/animations": "^4.4.3",
     "@angular/cdk": "^2.0.0-beta.11",
     "@angular/material": "^2.0.0-beta.11",
-    "angular2-text-mask": "^1.0.1",
+    "angular2-text-mask": "^8.0.4",
     "text-mask-addons": "^3.6.0"
   }
 }

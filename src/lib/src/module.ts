@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MdInputModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TextMaskModule } from 'angular2-text-mask';
+import { TextMaskModule } from 'angular2-text-mask/src/angular2TextMask';
 import { PriceFormatComponent } from './component/price-format.component';
 import { MdPriceFormatComponent } from './component/md/md-price-format.component';
 
