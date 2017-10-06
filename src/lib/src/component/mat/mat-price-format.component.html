@@ -1,0 +1,16 @@
+<mat-form-field>
+  <input matInput
+    type="tel"
+    [textMask]="{mask:numberMask}"
+    [formControl]="control"
+    [value]="_price"
+    [readonly]="readonly"
+    [ngClass]="options.cssclass"
+    [placeholder]="options.placeholder"
+
+    (keyup)="handleKeyboardKeyUp($event)"
+    (keydown)="handleKeyboardKeyDown($event)"
+    (focusout)="focusOutEvent()"
+    (focusin)="focusInEvent()"/>
+  <mat-error>{{error}}</mat-error>
+</mat-form-field>

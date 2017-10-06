@@ -1,11 +1,11 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MdInputModule } from '@angular/material';
+import { MatInputModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TextMaskModule } from 'angular2-text-mask';
 import { PriceFormatComponent } from './component/price-format.component';
-import { MdPriceFormatComponent } from './component/md/md-price-format.component';
+import { MatPriceFormatComponent } from './component/mat/mat-price-format.component';
 
 const CommonImports = [
   CommonModule,
@@ -32,15 +32,15 @@ export class PriceFormatModule {
       ...CommonImports,
       ReactiveFormsModule,
       BrowserAnimationsModule,
-      MdInputModule
+      MatInputModule
     ],
-    declarations: [ MdPriceFormatComponent ],
-    exports: [ MdPriceFormatComponent ]
+    declarations: [ MatPriceFormatComponent ],
+    exports: [ MatPriceFormatComponent ]
 })
-export class MdPriceFormatModule {
+export class MatPriceFormatModule {
     static forRoot(): ModuleWithProviders {
         return {
-            ngModule: MdPriceFormatModule,
+            ngModule: MatPriceFormatModule,
             providers: []
         };
     }

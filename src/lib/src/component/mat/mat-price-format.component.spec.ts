@@ -4,7 +4,7 @@ import { ComponentFixture, TestBed }                     from '@angular/core/tes
 import { FormsModule, NG_VALUE_ACCESSOR, NG_VALIDATORS } from '@angular/forms';
 
 /* Own modules */
-import { MdPriceFormatComponent } from './md-price-format.component';
+import { MatPriceFormatComponent } from './mat-price-format.component';
 import { PriceFormatOptions } from '../../utils/price-format.options';
 import { PriceFormatOptionsMock } from '../../mock/price-format.options.mock';
 import { PriceFormatTransformer } from '../../utils/price-format.transformer';
@@ -13,24 +13,24 @@ import { PriceFormatValidator } from '../../validator/price-format.validator';
 import { PriceFormatValidatorMock } from '../../mock/price-format.validator.mock';
 
 
-describe('MdPriceFormatComponent', () => {
-  let comp: MdPriceFormatComponent;
-  let fixture: ComponentFixture<MdPriceFormatComponent>;
+describe('MatPriceFormatComponent', () => {
+  let comp: MatPriceFormatComponent;
+  let fixture: ComponentFixture<MatPriceFormatComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [FormsModule],
-      declarations: [MdPriceFormatComponent],
+      declarations: [MatPriceFormatComponent],
       providers: [
         { provide: PriceFormatOptions, useClass: PriceFormatOptionsMock },
         { provide: PriceFormatValidator, useClass: PriceFormatValidatorMock },
         { provide: PriceFormatTransformer, useClass: PriceFormatTransformerMock },
-        { provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => MdPriceFormatComponent), multi: true },
-        { provide: NG_VALIDATORS, useExisting: forwardRef(() => MdPriceFormatComponent), multi: true }
+        { provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => MatPriceFormatComponent), multi: true },
+        { provide: NG_VALIDATORS, useExisting: forwardRef(() => MatPriceFormatComponent), multi: true }
       ]
     });
 
-    fixture = TestBed.createComponent(MdPriceFormatComponent);
+    fixture = TestBed.createComponent(MatPriceFormatComponent);
     comp = fixture.componentInstance;
   });
 
