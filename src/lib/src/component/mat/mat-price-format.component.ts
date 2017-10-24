@@ -42,7 +42,7 @@ export class MatPriceFormatComponent extends BasePriceFormatComponent implements
     priceFormatMaxValueError: 'Insert a price less than or equal to ${maxPrice}',
   };
   public error = '';
-  public numberMask = null;
+  public numberMask = [];
 
   ngOnInit() {
     const self = this;
