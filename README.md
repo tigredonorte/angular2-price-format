@@ -3,18 +3,14 @@
 Gorilainvest modifies for angular2 directive, based on angular price format directive for angularJs
 https://github.com/Finance-e/angular-price-format/
 
-## Requirements
+## Installation
 
-- Angular2
+To install this library, run:
 
-## Install
+```bash
+$ npm install angular-date-format --save-dev
+```
 
+## License
 
-## Usage
-
-
-## Gulp
-
-
-## Run demo
-
+MIT
