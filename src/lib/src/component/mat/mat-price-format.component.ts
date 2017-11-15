@@ -23,7 +23,7 @@ import { BasePriceFormatComponent } from '../base-price-format.component';
 interface ErrorMapping {
   priceFormatNegativeError?: string;
   priceFormatMinValueError?: string;
-  priceFormatMaxValueError?: string;
+  priceFormatMaxValueError?: string;
 };
 
 @Component({
