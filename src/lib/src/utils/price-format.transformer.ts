@@ -46,11 +46,16 @@ export class PriceFormatTransformer {
   }
 
   public getCleanValue(newValue: string): string {
-    let temp = newValue;
-    temp = temp.split(this.options['prefix']).join('');
-    temp = temp.split(this.options['suffix']).join('');
-    temp = temp.split(this.options['thousandsSeparator']).join('');
-    temp = temp.split(this.options['centsSeparator']).join('');
+    let temp = String(newValue);
+    try {
+      temp = temp.split(this.options['prefix']).join('');
+      temp = temp.split(this.options['suffix']).join('');
+      temp = temp.split(this.options['thousandsSeparator']).join('');
+      temp = temp.split(this.options['centsSeparator']).join('');
+    } catch (e) {
+      console.warn('Error when getting clean value: ', e);
+      temp = newValue;
+    }
     return temp;
   }
 
