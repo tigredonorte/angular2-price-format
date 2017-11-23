@@ -1,6 +1,6 @@
 {
   "name": "angular-price-format",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "",
   "main": "./bundles/angular-price-format.umd.js",
   "module": "./angular-price-format.es5.js",
