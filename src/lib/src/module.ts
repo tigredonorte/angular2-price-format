@@ -2,7 +2,6 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TextMaskModule } from 'angular2-text-mask';
 import { PriceFormatComponent } from './component/price-format.component';
 import { MatPriceFormatComponent } from './component/mat/mat-price-format.component';
@@ -31,7 +30,6 @@ export class PriceFormatModule {
     imports: [
       ...CommonImports,
       ReactiveFormsModule,
-      BrowserAnimationsModule,
       MatInputModule
     ],
     declarations: [ MatPriceFormatComponent ],
