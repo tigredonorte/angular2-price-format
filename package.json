@@ -1,11 +1,11 @@
 {
   "name": "angular-price-format",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "",
-  "main": "./bundles/angular-price-format.umd.js",
-  "module": "./angular-price-format.es5.js",
-  "es2015": "./angular-price-format.js",
-  "typings": "./angular-price-format.d.ts",
+  "main": "./dist/bundles/angular-price-format.umd.js",
+  "module": "./dist/angular-price-format.es5.js",
+  "es2015": "./dist/angular-price-format.js",
+  "typings": "./dist/angular-price-format.d.ts",
   "author": {
     "name": "Thompsom Moreira",
     "email": "thompsom@gorilainvest.com.br"
@@ -69,7 +69,7 @@
     "@compodoc/compodoc": "^1.0.0-beta.10",
     "@types/jasmine": "2.5.38",
     "@types/node": "~6.0.60",
-    "codelyzer": "~2.0.0",
+    "codelyzer": "4.1.0",
     "concurrently": "^3.4.0",
     "core-js": "^2.4.1",
     "del": "^2.2.2",
@@ -102,11 +102,11 @@
     "rollup-plugin-sourcemaps": "^0.4.1",
     "rollup-plugin-uglify": "^2.0.1",
     "run-sequence": "^1.2.2",
-    "rxjs": "^5.1.0",
+    "rxjs": "5.5.2",
     "systemjs": "^0.20.16",
-    "ts-node": "~2.0.0",
-    "tslint": "~4.5.0",
-    "typescript": "~2.3.0",
+    "ts-node": "3.3.0",
+    "tslint": "5.8.0",
+    "typescript": "2.3.4 || 2.4.2",
     "zone.js": "^0.8.4"
   },
   "dependencies": {
