@@ -50,8 +50,10 @@ return Promise.resolve()
   // Copy typings and metadata to `dist/` folder.
   .then(() => Promise.resolve()
     .then(() => _relativeCopy('**/*.d.ts', es2015OutputFolder, distFolder))
+    .then(() => _relativeCopy('**/*.js', es2015OutputFolder, distFolder))
     .then(() => _relativeCopy('**/*.metadata.json', es2015OutputFolder, distFolder))
     .then(() => console.log('Typings and metadata copy succeeded.'))
+    .catch(console.warn)
   )
   // Bundle lib.
   .then(() => {
