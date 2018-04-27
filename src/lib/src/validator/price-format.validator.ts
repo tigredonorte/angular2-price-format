@@ -1,11 +1,11 @@
 /* Angular modules */
-import {FormControl} from '@angular/forms';
+import { ValidatorFn, AbstractControl} from '@angular/forms';
 
 /*
  *  NOTE: This doesn't validate correctly for minValue less than 0.01.
  */
-export function PriceFormatValidator(minValue: number|string, maxValue: number|string, allowNegative: boolean) {
-    return (c: FormControl): any => {
+export function PriceFormatValidator(minValue: number|string, maxValue: number|string, allowNegative: boolean): ValidatorFn {
+    return (c: AbstractControl): any => {
         if (isNaN(c.value)) {
             return {priceFormatNotNumberError: {given: c.value}};
         }

@@ -20,7 +20,7 @@ import { BasePriceFormatComponent } from '../base-price-format.component';
 
 // TODO send this interface to own file and export it
 
-interface ErrorMapping {
+export interface ErrorMapping {
   priceFormatNegativeError?: string;
   priceFormatMinValueError?: string;
   priceFormatMaxValueError?: string;
