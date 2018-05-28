@@ -71,7 +71,8 @@
     "@angular/http": ">=4 <6",
     "@angular/material": ">=2.0.0-beta <6",
     "@angular/platform-browser": ">=4 <6",
-    "@angular/platform-browser-dynamic": ">=4 <6"
+    "@angular/platform-browser-dynamic": ">=4 <6",
+    "typescript": ">=2.3.4"
   },
   "devDependencies": {
     "@angular/cli": "^1.7.0",
@@ -116,7 +117,6 @@
     "systemjs": "^0.20.16",
     "ts-node": "3.3.0",
     "tslint": "5.8.0",
-    "typescript": "^2.8.3",
     "zone.js": "^0.8.26"
   },
   "dependencies": {

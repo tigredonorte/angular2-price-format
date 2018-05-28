@@ -1,9 +1,9 @@
+import { LOCALE_ID, NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { LOCALE_ID, NgModule } from '@angular/core';
-import { MAT_DATE_LOCALE_PROVIDER } from '@angular/material';
-import { MatPriceFormatModule } from 'angular-price-format';
 
+import { MatPriceFormatModule } from './../../../lib/src/module';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -13,11 +13,12 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     NoopAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatPriceFormatModule
   ],
   providers: [
-    { provide: LOCALE_ID, useValue: 'pt-BR' },
-    MAT_DATE_LOCALE_PROVIDER
+    { provide: LOCALE_ID, useValue: 'pt-BR' }
   ],
   bootstrap: [AppComponent]
 })

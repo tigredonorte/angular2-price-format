@@ -1,5 +1,5 @@
-import { Component, Inject, LOCALE_ID } from '@angular/core';
-import { MAT_DATE_LOCALE } from '@angular/material';
+import { Component } from '@angular/core';
+import { FormControl, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +7,31 @@ import { MAT_DATE_LOCALE } from '@angular/material';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
 
-  constructor(@Inject(LOCALE_ID) localeId, @Inject(MAT_DATE_LOCALE) matLocale) {
-    console.log(localeId, matLocale);
+  value = '';
+  form = this.fb.group({
+    'price': this.fb.control({ value: '' }, [])
+  });
+  options = {
+    minValue: '',
+    maxValue: '',
+    prefix: 'R$ ',
+    suffix: '',
+    centsSeparator: '.',
+    thousandsSeparator: ',',
+    limit: false,
+    centsLimit: 2,
+    clearPrefix: true,
+    clearSuffix: true,
+    allowNegative: false,
+    insertPlusSign: false,
+    cssclass: '',
+    placeholder: ''
+  };
+
+  constructor(protected fb: FormBuilder) {
+    this.form.get('price').valueChanges.subscribe(data => {
+      this.value = data;
+    });
   }
 }

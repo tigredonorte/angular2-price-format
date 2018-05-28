@@ -1,2 +1,50 @@
-<mat-date-format usefullDate="1" placeholder='Data de negociação' maxDate='today' [minDate]="2018-01-01">
-</mat-date-format>
+<div>
+  <!-- <h1>Try some configs:</h1>
+  <input type="checkbox" name="" value="Usefull Date" [(ngModel)]="options.usefullDate">
+  Usefull Date
+
+  <input type="checkbox" name="" value="Holiday" [(ngModel)]="options.holiday">
+  Holiday
+
+  <input type="checkbox" name="" value="Weekend" [(ngModel)]="options.weekend">
+  Weekend
+
+  <input type="checkbox" name="" value="Weekend" [(ngModel)]="options.forceMask">
+  Force Mask
+
+  <br><br>
+  MinDate
+  <br>
+  <input type="date" name="minDate" [(ngModel)]="options.minDate">
+
+  <br><br>
+  MaxDate
+  <br>
+  <input type="date" name="maxDate" [(ngModel)]="options.maxDate">
+
+  <br><br>
+  Format
+  <br>
+  <select [(ngModel)]="options.format">
+    <option value='DD/MM/YYYY'>DD/MM/YYYY</option>
+    <option value='YYYY-MM-DD'>YYYY-MM-DD</option>
+  </select> -->
+
+  <hr/>
+
+  <form [formGroup]="form">
+    <mat-price-format
+      name="price"
+      formControlName="price"
+      placeholder='Type a price'
+      [options]="options"
+    >
+    </mat-price-format>
+  </form>
+  <br>
+  computed: {{value}}
+  <br>
+
+  <h2>Raw config:</h2>
+  <p>{{ options | json }}</p>
+</div>

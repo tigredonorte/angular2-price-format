@@ -15,7 +15,7 @@ import {
 } from '@angular/forms';
 
 /* Own modules */
-import { BasePriceFormatComponent } from './base-price-format.component';
+import { BasePriceFormatComponent } from '../reusable/base-price-format.component';
 
 @Component({
   selector: 'price-format',
